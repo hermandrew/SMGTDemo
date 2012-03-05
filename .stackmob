@@ -1,0 +1,7 @@
+sm_app_name: gtbankdemo
+sm_client_name: appek
+html5: true
+
+development:
+  key: e30a15a0-46de-42d9-96bf-871f31bf43b4
+  secret: 17349e54-27fb-4556-80f8-81b56077fdfc
