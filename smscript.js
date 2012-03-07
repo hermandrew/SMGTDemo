@@ -6,6 +6,7 @@ function createUser() {
 	var mName = $('#mName').val();
 	var lName = $('#lName').val();
 	
+	alert("Creating");
 	console.debug("User stuff:\n" + username + "\n" + password + "\n" + fName + "\n" + mName + "\n" + lName);
 	
 	var user = new StackMob.User({
@@ -28,6 +29,7 @@ function login() {
 	var username = $('#accountNumber').val();
 	var password = $('#password').val();
 	
+	alert("logging in");
 	var user = new StackMob.User({ 
 		'username': username,
 		'password': password
@@ -42,6 +44,8 @@ function login() {
 
 function fetchUser() {
 	var username = $('accountNumber').val();
+	
+	alert("Fetching User");
 	
 	var user = new StackMob.User({
 		'username': username
