@@ -19,8 +19,8 @@ function createUser() {
 	});
 	
 	user.create({
-		success: handleUserCreated,
-		error: handleError
+		'success': handleUserCreated,
+		'error': handleError
 	});
 }
 
@@ -37,8 +37,8 @@ function login() {
 	alert("User Built, trying login...");
 	// The BOOL indicates a "Keep Logged In" that is not implemented as of 3/7
 	user.login(false, {
-		success: handleLoggedIn,
-		error: handleError
+		'success': handleLoggedIn,
+		'error': handleError
 	});
 	alert("Loggin'");
 }
@@ -53,7 +53,7 @@ function fetchUser() {
 	});
 	
 	user.fetch({
-		success:handleUserFetched,
+		success: handleUserFetched,
 		error: handleError
 	});
 }
