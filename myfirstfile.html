@@ -24,6 +24,8 @@
 <input id="create" type="submit" onclick="create();" value="Create User"/>
 <input id="read" type="submit" onclick="read();" value="Read User"/>
  
+<p>TESTING</p>
+ 
 <script type="text/javascript">
   /* For sake of clarity, no jQuery is used in this example so as to focus on StackMob SDK syntax. */
  
@@ -53,13 +55,16 @@
     var username = document.getElementById('username').value;
     if (username != '') {
       //Call StackMob via Ajax to read a user
+      $('p').html("fetching...");
       var fetchuser = new StackMob.User({ 'username': username });
       fetchuser.fetch({
         success: function(model) {
+          $('p').html("Fetched!");
           console.debug("We fetched the user from StackMob!");
           console.debug(model.toJSON());
         },
         error: function(model, response) {
+          $('p').html("Error!");
           console.debug(response);
         }
       });
