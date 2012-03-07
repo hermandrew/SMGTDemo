@@ -90,8 +90,9 @@ function handleUserFetched(model) {
 
 // Error handler
 function handleError(model, response) {
-	alert(response.error);
+	log("ERROR!");
 	if(response) {
+		alert(response.error);
 		console.debug(response);
 	}
 }
