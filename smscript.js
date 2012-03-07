@@ -29,8 +29,7 @@ function login() {
 	var username = $('#accountNumber').val();
 	var password = $('#password').val();
 	
-	alert("logging in");
-	alert("loggin confirm");
+	alert("logging in2");
 	var user = new StackMob.User({ 
 		'username': username,
 		'password': password
