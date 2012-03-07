@@ -31,15 +31,15 @@ function login() {
 	
 	log("Loggin in");
 	var user = new StackMob.User({ 
-		'username': username,
-		'password': password
+		"username": username,
+		"password": password
 	});
 
 	log("User built, trying login...");
 	// The BOOL indicates a "Keep Logged In" that is not implemented as of 3/7
 	user.login(false, {
-		'success': handleLoggedIn,
-		'error': handleError
+		"success": handleLoggedIn,
+		"error": handleError
 	});
 
 	log("loggin' in");
