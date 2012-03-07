@@ -6,8 +6,8 @@ function createUser() {
 	var mName = $('#mName').val();
 	var lName = $('#lName').val();
 	
-	alert("Creating");
 	console.debug("User stuff:\n" + username + "\n" + password + "\n" + fName + "\n" + mName + "\n" + lName);
+	log("Creating");
 	
 	var user = new StackMob.User({
 		'username': username,
@@ -29,18 +29,20 @@ function login() {
 	var username = $('#accountNumber').val();
 	var password = $('#password').val();
 	
-	alert("logging in2");
+	log("Loggin in");
 	var user = new StackMob.User({ 
 		'username': username,
 		'password': password
 	});
-	alert("User Built, trying login...");
+
+	log("User built, trying login...");
 	// The BOOL indicates a "Keep Logged In" that is not implemented as of 3/7
 	user.login(false, {
 		'success': handleLoggedIn,
 		'error': handleError
 	});
-	alert("Loggin'");
+
+	log("loggin' in");
 }
 
 function fetchUser() {
@@ -68,15 +70,13 @@ function handleUserCreated(model) {
 }
 
 function handleLoggedIn(model) {
-	alert("about to console log...");
-	console.debug("Logged In");
-	alert("console loggin'...");
+
 	if(model) {
 		console.debug(model.toJSON());
 	}
-	alert("about to fetch user");
+	log("Fetchin' user...");
 	fetchUser();
-	alert("user fetched");
+	log("User fetched?");
 }
 
 function handleUserFetched(model) {
@@ -94,4 +94,9 @@ function handleError(model, response) {
 	if(response) {
 		console.debug(response);
 	}
+}
+
+// Test Text
+function log(str) {
+	$('p').html($('p').html() + "<br>" + str);
 }
