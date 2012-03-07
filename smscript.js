@@ -34,12 +34,13 @@ function login() {
 		'username': username,
 		'password': password
 	});
-	
+	alert("User Built, trying login...");
 	// The BOOL indicates a "Keep Logged In" that is not implemented as of 3/7
 	user.login(false, {
 		success: handleLoggedIn,
 		error: handleError
 	});
+	alert("Loggin'");
 }
 
 function fetchUser() {
@@ -67,12 +68,15 @@ function handleUserCreated(model) {
 }
 
 function handleLoggedIn(model) {
+	alert("about to console log...");
 	console.debug("Logged In");
+	alert("console loggin'...");
 	if(model) {
 		console.debug(model.toJSON());
 	}
-	
+	alert("about to fetch user");
 	fetchUser();
+	alert("user fetched");
 }
 
 function handleUserFetched(model) {
@@ -86,6 +90,8 @@ function handleUserFetched(model) {
 
 // Error handler
 function handleError(model, response) {
-	console.debug(response);
 	alert(response.error);
+	if(response) {
+		console.debug(response);
+	}
 }
