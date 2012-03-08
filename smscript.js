@@ -72,7 +72,7 @@ function getPIN() {
 
 	$.ajax({
 		type: "get",
-	    url: "http://www.appekapps.com/gtbank/pushutil/index.php",
+	    url: "http://www.appekapps.com/",
 	    success: function(msg) {
 	    	log("Returned from index.php");
 	    	log("data: " + msg);
