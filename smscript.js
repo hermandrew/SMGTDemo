@@ -48,8 +48,6 @@ function login() {
 function fetchUser() {
 	var username = $('accountNumber').val();
 	
-	alert("Fetching User");
-	
 	var user = new StackMob.User({
 		'username': username
 	});
@@ -92,7 +90,7 @@ function handleUserFetched(model) {
 function handleError(model, response) {
 	log("ERROR!");
 	if(response) {
-		alert(response.error);
+		log(response.error);
 		console.debug(response);
 	}
 }
