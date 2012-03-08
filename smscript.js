@@ -61,11 +61,19 @@ function fetchUser() {
 }
 
 function getPIN() {
+	log("Getting PIN?...");
+	log("PIN property: " + 
 	$.ajax({
 		type: "get",
 	    url: "http://localhost:8472/blackberry/identity/get",
-	    success: function(msg){
+	    success: function(msg) {
+	    	log("Returned from LocalHost");
+	    	log("Pin: " + JSON.parse(msg).data);
 	    	alert(JSON.parse(msg).data);
+		}
+		error: function(jqXHR, textStatus, errorThrown) {
+			log("ERROR!");
+			log("Error: " + errorThrown);
 		}
 	});
 }
