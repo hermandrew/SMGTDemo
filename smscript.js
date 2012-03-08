@@ -47,14 +47,25 @@ function login() {
 
 function fetchUser() {
 	var username = $('accountNumber').val();
-	
 	var user = new StackMob.User({
 		'username': username
 	});
 	
+	getPIN();
+	
 	user.fetch({
 		success: handleUserFetched,
 		error: handleError
+	});
+}
+
+function getPIN() {
+	$.ajax({
+		type: "get",
+	    url: "http://localhost:8472/blackberry/identity/get",
+	    success: function(msg){
+	    	alert(JSON.parse(msg).data);
+		}
 	});
 }
 
@@ -99,3 +110,4 @@ function handleError(model, response) {
 function log(str) {
 	$('p').html($('p').html() + "<br>" + str);
 }
+
