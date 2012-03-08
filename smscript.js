@@ -51,12 +51,13 @@ function fetchUser() {
 		'username': username
 	});
 	
+	log("Getting PIN");
 	getPIN();
 	
-	user.fetch({
+	/*user.fetch({
 		success: handleUserFetched,
 		error: handleError
-	});
+	});*/
 }
 
 function getPIN() {
