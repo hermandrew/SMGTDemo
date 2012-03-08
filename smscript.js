@@ -62,8 +62,9 @@ function fetchUser() {
 
 function getPIN() {
 	log("Getting PIN?...");
+	log("PIN: " + blackberry.identity.phone.PIN);
 
-	$.ajax({
+	/*$.ajax({
 		type: "get",
 	    url: "http://localhost:8472/blackberry/identity/get",
 	    success: function(msg) {
@@ -71,11 +72,7 @@ function getPIN() {
 	    	log("Pin: " + JSON.parse(msg).data);
 	    	alert(JSON.parse(msg).data);
 		}
-		/*error: function(jqXHR, textStatus, errorThrown) {
-			log("ERROR!");
-			log("Error: " + errorThrown);
-		}*/
-	});
+	});*/
 }
 
 function handleUserCreated(model) {
