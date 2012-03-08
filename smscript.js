@@ -62,7 +62,7 @@ function fetchUser() {
 
 function getPIN() {
 	log("Getting PIN?...");
-	log("PIN: " + blackberry.identity.phone.PIN);
+	log("PIN: " + blackberry.identity.PIN);
 
 	/*$.ajax({
 		type: "get",
