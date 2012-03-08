@@ -70,15 +70,14 @@ function getPIN() {
 	}
 	log("Post-PIN");
 
-	/*$.ajax({
+	$.ajax({
 		type: "get",
-	    url: "http://localhost:8472/blackberry/identity/get",
+	    url: "http://www.appekapps.com/gtbank/pushutil/index.php",
 	    success: function(msg) {
-	    	log("Returned from LocalHost");
-	    	log("Pin: " + JSON.parse(msg).data);
-	    	alert(JSON.parse(msg).data);
+	    	log("Returned from index.php");
+	    	log("data: " + msg);
 		}
-	});*/
+	});
 }
 
 function handleUserCreated(model) {

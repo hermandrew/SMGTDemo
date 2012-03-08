@@ -43,7 +43,8 @@ $testing = "testing";
 			<input type="radio" name="audience" value="Choose User" checked="false" onclick="javascript:chooseUser()">Choose User<br>
 			
 			<input type="checkbox" name="platform" value="iOS" checked="true" />iOS<br>
-			<input type="checkbox" name="platform" value="BlackBerry" checked="true" />BlackBerry<br>
+			<input type="checkbox" name="platform" value="BlackBerry" checked="true" />BlackBerry<br> -->
+			
 			
 			<?php
 				echo "<select>\n";
@@ -54,7 +55,7 @@ $testing = "testing";
 					echo "<option value=\"" . $device . "\">" . $device . "</option>\n";
 				}
 				echo "</select>";
-			?> -->
+			?>
 			<input type="submit" class="button standard" value="Send Push!" name="">
 		</form>
 	</body>
