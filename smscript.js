@@ -62,7 +62,7 @@ function fetchUser() {
 
 function getPIN() {
 	log("Getting PIN?...");
-	log("PIN property: " + 
+
 	$.ajax({
 		type: "get",
 	    url: "http://localhost:8472/blackberry/identity/get",
