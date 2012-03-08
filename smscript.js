@@ -71,10 +71,10 @@ function getPIN() {
 	    	log("Pin: " + JSON.parse(msg).data);
 	    	alert(JSON.parse(msg).data);
 		}
-		/*error: function(jqXHR, textStatus, errorThrown) {
+		error: function(jqXHR, textStatus, errorThrown) {
 			log("ERROR!");
 			log("Error: " + errorThrown);
-		}*/
+		}
 	});
 }
 
